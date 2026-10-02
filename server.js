@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
@@ -38,9 +38,10 @@ app.all('/proxy', async (req, res) => {
 });
 
 app.get('/', (req, res) => {
-    res.send('🚀 Cloud Proxy Server ay Online!');
+    res.send('🚀 24/7 Cloud Proxy Server ay Online!');
 });
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+        
